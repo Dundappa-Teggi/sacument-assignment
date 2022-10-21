@@ -1,3 +1,6 @@
+'''
+Module to read .cfg file and return dictionary out of it
+'''
 import configparser
 config = configparser.ConfigParser()
 
