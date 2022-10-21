@@ -27,21 +27,22 @@ def writting_file(data) :
         return ".env file written"
 
 '''
-Reading .yaml, .cfg or .conf format files and prints dictionary out of it'''
+Reading .yaml, .cfg or .conf format files and prints dictionary out of it
+'''
 # Reading .cfg file and writting to .json or .env file if out file mentioned
-def readingFile(file_type,out_file_name) :
+def readingFile(file_name, file_type,out_file_name) :
+    
     if file_type == '.cfg' :
-        data = reading_cfg_file(sys.argv[1])
+        data = reading_cfg_file(file_name)
         if out_file_name:
             status = writting_file(data)
             print(status)
-
         pprint.pp(data)
 
 
     # Reading .conf file and writting to .json or .env file if out file mentioned
     if file_type == '.conf' :
-        data = reading_conf_file(sys.argv[1])
+        data = reading_conf_file(file_name)
         if out_file_name:
             status = writting_file(data)
             print(status)
@@ -50,22 +51,22 @@ def readingFile(file_type,out_file_name) :
 
     # Reading .yaml file and writting to .json or .env file if out file mentioned
     if file_type == '.yaml' :
-        data = reading_yaml_file(sys.argv[1])
+        data = reading_yaml_file(file_name)
         if out_file_name:
             status = writting_file(data)
             print(status)
         pprint.pp(data)
 
+
 if __name__ == "__main__":
     pp = pprint.PrettyPrinter(indent=4)
-    #file_type = sys.argv[1]
-
     out_file_name = 0
     if len(sys.argv) ==1 :
         print("No file found to read")
         exit(0)
     file_name, file_type = os.path.splitext(sys.argv[1])
+    file_name = sys.argv[1]
     if len(sys.argv) > 2 :
         out_file_name, out_file_type = os.path.splitext(sys.argv[2])
 
-    readingFile(file_type, out_file_name)
+    readingFile(file_name, file_type, out_file_name)
