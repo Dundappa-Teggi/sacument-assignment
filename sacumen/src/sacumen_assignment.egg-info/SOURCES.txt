@@ -1,0 +1,12 @@
+LICENCE
+README.md
+pyproject.toml
+src/sacumen_assignment/__init__.py
+src/sacumen_assignment/main.py
+src/sacumen_assignment/readingCfgFile.py
+src/sacumen_assignment/readingConfFile.py
+src/sacumen_assignment/readingYamlFile.py
+src/sacumen_assignment.egg-info/PKG-INFO
+src/sacumen_assignment.egg-info/SOURCES.txt
+src/sacumen_assignment.egg-info/dependency_links.txt
+src/sacumen_assignment.egg-info/top_level.txt
