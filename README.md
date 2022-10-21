@@ -20,7 +20,7 @@ pip install pytest
 ```
 
 # Excuting the file 
-python main.py <reading file path> [optional]<writting file path>
+python main.py reading_file_path [optional]writting_file_path
 
 Where reading file path is the path of .conf/.cfg/.yaml file and it prints dictionalry out of it in terminal. 
 
