@@ -1,7 +1,6 @@
 '''
 Module to read .yaml file and return dictionary out of it
 '''
-#!/usr/bin/env python
 
 import os
 import yaml
