@@ -1,5 +1,5 @@
 '''
-Module to read .cfg file and return dictionary out of it
+Module to read .conf file and return dictionary out of it
 '''
 
 import configparser
